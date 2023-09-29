@@ -100,6 +100,11 @@ public class Agenda {
     }
 
 
+    public List<Contacto> ordenarAlfabeticamente2() {
+        this.contactos.sort(Comparator.comparing(Contacto::getNombre).reversed());
+        return this.contactos;
+    }
+
     public List<Contacto> ordenarAlfabeticamente(){
         this.contactos.sort(Comparator.comparing(Contacto::getNombre).thenComparing(Contacto::getApellido));
         return this.contactos;
